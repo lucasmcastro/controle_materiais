@@ -1,0 +1,29 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <h3>Lista Materiais</h3>
+        <hr>
+        <a href="/cadastro">Novo Material</a>
+        <hr>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Quantidade</th>
+                    <th>Preço</th>
+                </tr>
+            </thead>
+            <tbody>
+        {% for item in lista %}
+            <tr>
+                <td>{{item.get('nome')}}</td>
+                <td>{{item.get('quantidade')}}</td>
+                <td>{{item.get('preco')}}</td>
+            <tr>
+        {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>
+
